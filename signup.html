@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/login-icon.png" type="image/x-icon">
+    <title>LogIn</title>
+</head>
+
+<body>
+    <main class="vh-100 p-5">
+        <div class="container mx-auto p-5">
+            <h1 class="font-monospace">Smart Login System</h1>
+            <input id="uname" type="text" class="form-control bg-transparent my-3 text-white "  placeholder="Enter Your Name">
+            <input id="email" type="email" class="form-control bg-transparent my-3 text-white "  placeholder="Enter Your Email">
+            <input id="password" type="password" class="form-control bg-transparent mb-2 text-white "  placeholder="Enter Your Password">
+            <p class="text-center mt-3 font-monospace">
+                <span class="warning d-none">All inputs are required</span>
+                <span class="warning d-none">Email already exists</span>
+                <span class="warning d-none span">Invalid</span>
+                <span class="success d-none">Success</span>
+            </p>
+            <a id="anchorUP">
+            <button type="button" class="btn mt-4 mb-3 w-100">Sign Up</button>
+            </a>
+            <p class="text-white fw-semibold text-center font-monospace">You have an account? <a href="index.html" class="text-decoration-none text-white"> Signin</a> </p>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>
