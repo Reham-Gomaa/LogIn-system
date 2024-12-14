@@ -1,7 +1,8 @@
 var uname = document.querySelector('#uname');
 var email = document.querySelector('#email');
 var password = document.querySelector('#password');
-var anchorUP = document.querySelector("#anchorUP");
+var signUpBtn = document.querySelector('#signUpBtn');
+let url =( location.pathname).split("signup.html").slice(0,1).join();
 
 var users = [];
 
@@ -13,25 +14,25 @@ function store(){
     localStorage.setItem('allUsers' , JSON.stringify(users));
 };
 
-anchorUP.addEventListener('click' , function(){
+signUpBtn.addEventListener('click' , function(){
     signUp();
 });
 
 function signUp(){
     if(uname.value == '' | email.value == '' | password.value == ''){
-        anchorUP.previousElementSibling.children[0].classList.replace('d-none' , 'd-block');
-        anchorUP.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[2].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[0].classList.replace('d-none' , 'd-block');
+        signUpBtn.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[2].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
         console.log('fady')
         return false;
     }
     for(var i = 0; i < users.length; i++){
         if(users[i].userEmail == email.value){
-            anchorUP.previousElementSibling.children[1].classList.replace('d-none' , 'd-block');
-            anchorUP.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
-            anchorUP.previousElementSibling.children[2].classList.replace('d-block' , 'd-none');
-            anchorUP.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
+            signUpBtn.previousElementSibling.children[1].classList.replace('d-none' , 'd-block');
+            signUpBtn.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
+            signUpBtn.previousElementSibling.children[2].classList.replace('d-block' , 'd-none');
+            signUpBtn.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
             console.log('mwgood ya m3alem')
             return false;
         }
@@ -46,13 +47,12 @@ function signUp(){
         users.push(user);
         store();
         console.log(users);
-        anchorUP.setAttribute('href' , './index.html');
-        // location.replace(url + "/index.html");
+        location.replace(url + "index.html");
     }else{
-        anchorUP.previousElementSibling.children[2].classList.replace('d-none' , 'd-block');
-        anchorUP.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[2].classList.replace('d-none' , 'd-block');
+        signUpBtn.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
     }
 };
 function validate(data){
@@ -63,17 +63,17 @@ function validate(data){
     }
   
     if(regex[data.id].test(data.value)){
-        anchorUP.previousElementSibling.children[3].classList.replace('d-none' , 'd-block');
-        anchorUP.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[2].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[3].classList.replace('d-none' , 'd-block');
+        signUpBtn.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[2].classList.replace('d-block' , 'd-none');
         console.log('tmam')
         return true;
     }else{
-        anchorUP.previousElementSibling.children[2].classList.replace('d-none' , 'd-block');
-        anchorUP.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
-        anchorUP.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[2].classList.replace('d-none' , 'd-block');
+        signUpBtn.previousElementSibling.children[0].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[1].classList.replace('d-block' , 'd-none');
+        signUpBtn.previousElementSibling.children[3].classList.replace('d-block' , 'd-none');
         console.log('invalid')
         return false;
     }
