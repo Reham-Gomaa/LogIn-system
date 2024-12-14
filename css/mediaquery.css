@@ -1,0 +1,43 @@
+@media all and (width < 576px){
+    main .container{
+        width: 85%;
+    }
+    main .container h1{
+        width: 80%;
+    }
+    nav .container{
+        width: 100%;
+    }
+}
+@media all and (576px <= width < 768px){
+    main .container{
+        width: 67%;
+    }
+}
+@media all and (768px <= width < 992px){
+    main .container{
+        width: 70%;
+    }
+    main .container h1{
+        width: 80%;
+    }
+    nav .container{
+        width: 75%;
+    }
+}
+@media all and (992px <= width < 1200px){
+    main .container{
+        width: 70%;
+    }
+    nav .container{
+        width: 75%;
+    }
+}
+@media all and (1200px <= width < 1400px){
+    main .container{
+        width: 70%;
+    }
+    nav .container{
+        width: 75%;
+    }
+}
